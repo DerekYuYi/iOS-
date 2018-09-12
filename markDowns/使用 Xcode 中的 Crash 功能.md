@@ -13,3 +13,6 @@
  - 点击 `Open in Project...`, 可以跟踪到项目中 Crash 的那一行
 	
 	 ![1](https://github.com/DerekYuYi/iOS-MarkDown/blob/master/images/1.png)
+	 
+	 ![4](https://github.com/DerekYuYi/iOS-MarkDown/blob/master/images/4.png)
+	 
