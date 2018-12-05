@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no"/>
+    </head>
+    <body>
+        标题名: <span id="titleName"></span>
+        <br/>
+        测试名字: <span id="name"></span>
+        <br/>
+        测试号码: <span id="mobileNumber"></span>
+        <br/>
+        测试信息: <span id="msg"></span>
+        <br/>
+        <button onclick="response()">响应原生</button>
+        <br/>
+        <button onclick="btnClick1()">按钮1</button>
+        <br/>
+        <button onclick="btnClick2()">按钮2</button>
+        <br/>
+        <button onclick="btnClick3()">按钮3</button>
+        <script type="text/javascript">
+            
+            
+            function sayHello(name) {
+                document.getElementById("titleName").innerHTML = name
+                return "原生你好"
+            }
+        
+            function response() {
+                window.webkit.messageHandlers.AppModel.postMessage("WebView点击，发送消息给原生！")
+            }
+        
+            function clear() {
+                document.getElementById('name').innerHTML = ''
+                document.getElementById('mobileNumber').innerHTML = ''
+                document.getElementById('msg').innerHTML = ''
+            }
+        
+            /// There are function lists that native invokes JS
+            
+            /*! @abstract 弹框测试1. native 调用 JS 函数, JS 函数无参数.
+             */
+            function alertMobile() {
+                alert('我是小黄, 手机号是: 13300001111')
+                document.getElementById('mobileNumber').innerHTML = '我是小黄, 手机号是: 13300001111'
+                return "alertMobile 方法调用结束"
+            }
+            
+            /*! @abstract 弹框测试2. native 调用 JS 函数, JS 函数只有单个参数.
+             @param msg String 类型. native 端传来的测试信息.
+             */
+            function alertName(msg) {
+                alert('你好 ' + msg + ', nice to meet you') // alert 操作由 native 拦截, 并在 native 执行 alert 操作. 类似的还有 text input 和 comfirm.
+                document.getElementById('name').innerHTML = '你好 ' + msg + ', nice to meet you'
+                return "alertName 方法调用结束" // native 能够获取该返回值 (视业务需要, optional)
+            }
+        
+            /*! @abstract 弹框测试3. native 调用 JS 函数, JS 函数包括多个参数.
+             @param num String 类型, native 端传来的测试信息.
+             @param msg String 类型, native 端传来的测试信息.
+             */
+            function alertSendMsg(num, msg) {
+                window.alert('这是我的手机号:' + num + ',' + msg + '!!')
+                document.getElementById('msg').innerHTML = '这是我的手机号:' + num + ',' + msg + '!!'
+            }
+        
+        
+            /// There are js lists that JS invokes native
+            
+            // pass Object to native(Dictionary)
+            function btnClick1() {
+                var message = {
+                    'key1': 'name1',
+                    'key2': 'name2'
+                }
+                window.webkit.messageHandlers.showMobile.postMessage(message)
+            }
+        
+            // pass String to native
+            function btnClick2() {
+                var message = "I‘am a string object."
+                window.webkit.messageHandlers.showName.postMessage(message)
+            }
+        
+            // pass Array to native
+            function btnClick3() {
+                var message = ['ArrayItem1', 'ArrayItem2']
+                window.webkit.messageHandlers.showSendMsg.postMessage(message)
+            }
+        
+        
+        </script>
+    </body>
+</html>
