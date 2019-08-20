@@ -16,6 +16,7 @@
 		981292B821B7A8FF006EC49B /* JSContextDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981292B721B7A8FF006EC49B /* JSContextDemo.swift */; };
 		981292BC21B7C823006EC49B /* YYJSExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981292BB21B7C823006EC49B /* YYJSExport.swift */; };
 		981292BE21B7C849006EC49B /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981292BD21B7C849006EC49B /* ExportViewController.swift */; };
+		98195699223115A60016B7CA /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98195698223115A60016B7CA /* LeakAvoider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		981292B721B7A8FF006EC49B /* JSContextDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSContextDemo.swift; sourceTree = "<group>"; };
 		981292BB21B7C823006EC49B /* YYJSExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYJSExport.swift; sourceTree = "<group>"; };
 		981292BD21B7C849006EC49B /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		98195698223115A60016B7CA /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				981292A221B62850006EC49B /* ViewController.swift */,
 				981292B321B649A2006EC49B /* test.html */,
+				98195698223115A60016B7CA /* LeakAvoider.swift */,
 			);
 			path = "WKWebView 与 JS 交互";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				981292BC21B7C823006EC49B /* YYJSExport.swift in Sources */,
+				98195699223115A60016B7CA /* LeakAvoider.swift in Sources */,
 				981292A321B62850006EC49B /* ViewController.swift in Sources */,
 				981292A121B62850006EC49B /* AppDelegate.swift in Sources */,
 				981292B821B7A8FF006EC49B /* JSContextDemo.swift in Sources */,
@@ -325,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Q6M9XSRKL;
+				DEVELOPMENT_TEAM = 7PSA7A9D36;
 				INFOPLIST_FILE = WKWebviewJSDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Summer.WKWebviewJSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -344,7 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Q6M9XSRKL;
+				DEVELOPMENT_TEAM = 7PSA7A9D36;
 				INFOPLIST_FILE = WKWebviewJSDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Summer.WKWebviewJSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

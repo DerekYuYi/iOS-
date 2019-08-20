@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import JavaScriptCore
 
 class ViewController: UIViewController {
     
@@ -24,10 +25,11 @@ class ViewController: UIViewController {
         
         // 给 webView 与 Swift 交互注册一个脚本消息处理器名字: ”AppModel“
         // 添加 JS 事件: 这里 JS 调用 messageHandler 的 AppModel 消息, 给原生发送消息
-        configuration.userContentController.add(self, name: "AppModel")
-        configuration.userContentController.add(self, name: "showMobile")
-        configuration.userContentController.add(self, name: "showName")
-        configuration.userContentController.add(self, name: "showSendMsg")
+        let leakAvoider = LeakAvoider(self)
+        configuration.userContentController.add(leakAvoider, name: "AppModel")
+        configuration.userContentController.add(leakAvoider, name: "showMobile")
+        configuration.userContentController.add(leakAvoider, name: "showName")
+        configuration.userContentController.add(leakAvoider, name: "showSendMsg")
         
         let frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - 300)
         var tempWebView = WKWebView(frame: frame, configuration: configuration)
@@ -83,6 +85,7 @@ class ViewController: UIViewController {
     }
     
     deinit {
+        
         webView.configuration.userContentController.removeScriptMessageHandler(forName: "AppModel")
         webView.configuration.userContentController.removeScriptMessageHandler(forName: "showMobile")
         webView.configuration.userContentController.removeScriptMessageHandler(forName: "showName")
@@ -105,11 +108,6 @@ class ViewController: UIViewController {
 //            debugPrint(result ?? "no result when call function alertMobile")
 //            debugPrint(error ?? "no error when call function alertMobile")
 //        }
-        
-        webView.evaluateJavaScript("alertName('睿鱼')") { (result, error) in
-            debugPrint(result ?? "no result when call function alertName")
-            debugPrint(error ?? "no error when call function alertName")
-        }
 
         /*
         webView.evaluateJavaScript("alertSendMsg('18870707070','周末爬山真是件愉快的事情')") { (result, error) in
@@ -182,10 +180,61 @@ extension ViewController: WKNavigationDelegate {
     
     // 这里在 webView 加载完成后, 向 webView 发送消息, 当然我们也可以在其他时机(比如点击按钮)来向 webView 发送消息
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        webView.evaluateJavaScript("sayHello('原生给 JS 传值: WebView 你好!')") { (result, error) in
-            debugPrint(result ?? "no result")
-            debugPrint(error ?? "no error")
+//        webView.evaluateJavaScript("sayHello('原生给 JS 传值: WebView 你好!')") { (result, error) in
+//            debugPrint(result ?? "no result")
+//            debugPrint(error ?? "no error")
+//        }
+        
+//        alertSendMsg
+//        webView.evaluateJavaScript("alertSendMsg('电话号码', '消息')") { (result, error) in
+//            debugPrint(result ?? "no result")
+//            debugPrint(error ?? "no error")
+//        }
+        
+        // 传递值是一个字符串, 字符串里是一个 object
+        
+        let dict = ["key1": "余意1",
+                    "key2": "余意2",
+                    "key3": "余意3",
+                    "key4": "余意4"]
+        
+//        webView.evaluateJavaScript("alertInfos('\(dict)')") { (result, error) in
+//            debugPrint(result ?? "no result")
+//            debugPrint(error ?? "no error")
+//        }
+        
+        // method 1
+        // can't access jsContext in wkwebview
+//        if let jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext")
+//        {
+//            if let jsValue = jsContext.evaluateScript("alertInfos") {
+//                jsValue.call(withArguments: [dict])
+//            }
+//
+        
+        // method 2: 传递 字典给 JS 时, 先转化为 JsonString. 传递数组也是一样. 到 JS 端拿到的类型就行 Object 或者 Array.
+        
+            let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions.prettyPrinted)
+        if let jsonData = jsonData {
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+//                let js = String(format: "alertInfos(%@)", jsonString)
+                let js = "alertInfos(\(jsonString))"
+                webView.evaluateJavaScript(js) { (result, error) in
+                    debugPrint(result ?? "no result")
+                    debugPrint(error ?? "no error")
+                }
+            }
         }
+        
+        
+        // method 3
+//        let string = "{'key1': '余意1', 'key2': '余意2'}"
+//        let js = String(format: "alertInfos(%@)", string)
+//
+//        webView.evaluateJavaScript(js) { (result, error) in
+//            debugPrint(result ?? "no result")
+//            debugPrint(error ?? "no error")
+//        }
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -201,17 +250,28 @@ extension ViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         debugPrint(message.name) // messageHandler name
         debugPrint(message.body)
-        
+
         if message.name == "AppModel" {
-            
+        
         } else if message.name == "showMobile" {
             debugPrint("JS 中 按钮1 被点击了")
-            
+            openUrl("https://www.baidu.com")
+
         } else if message.name == "showName" {
             debugPrint("JS 中 按钮2 被点击了")
+            openUrl("https://www.google.com")
             
         } else if message.name == "showSendMsg" {
             debugPrint("JS 中 按钮3 被点击了")
+            openUrl("https://itunes.apple.com/us/app/miao-zhao-zhu-shou/id1457655044?l=zh&ls=1&mt=8")
+        }
+    }
+    
+    private func openUrl(_ urlString: String?) {
+        guard let urlString = urlString,
+            let url = URL(string: urlString) else { return }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 }

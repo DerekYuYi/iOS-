@@ -15,11 +15,11 @@
         <br/>
         <button onclick="response()">响应原生</button>
         <br/>
-        <button onclick="btnClick1()">按钮1</button>
+        <button onclick="btnClick1()">按钮1: 搜索百度</button>
         <br/>
-        <button onclick="btnClick2()">按钮2</button>
+        <button onclick="btnClick2()">按钮2: Google 一下</button>
         <br/>
-        <button onclick="btnClick3()">按钮3</button>
+        <button onclick="btnClick3()">按钮3: 下载妙招助手</button>
         <script type="text/javascript">
             
             
@@ -65,6 +65,14 @@
                 window.alert('这是我的手机号:' + num + ',' + msg + '!!')
                 document.getElementById('msg').innerHTML = '这是我的手机号:' + num + ',' + msg + '!!'
             }
+        
+        function alertInfos(infos) {
+            
+            // window.alert(infos)
+            window.alert(infos.key1 + infos.key2 + infos.key3)
+        }
+        
+        
         
         
             /// There are js lists that JS invokes native
