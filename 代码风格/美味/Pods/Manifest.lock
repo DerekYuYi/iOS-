@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (4.7.2)
+  - JCore (1.2.2)
+  - JPush (3.1.0):
+    - JCore (~> 1.2.0)
+  - Kingfisher (4.10.0)
+  - PPBadgeViewSwift (2.2.1)
+  - SnapKit (4.0.1)
+  - Toast-Swift (4.0.0)
+  - WechatOpenSDK (1.8.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7.2)
+  - JPush
+  - Kingfisher (~> 4.10.0)
+  - PPBadgeViewSwift
+  - SnapKit (~> 4.0.0)
+  - Toast-Swift (~> 4.0.0)
+  - WechatOpenSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - JCore
+    - JPush
+    - Kingfisher
+    - PPBadgeViewSwift
+    - SnapKit
+    - Toast-Swift
+    - WechatOpenSDK
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  JCore: f14c0549968a63c22e246a4875aa9d428446f373
+  JPush: 5921e25ad13e0386351079217b009f2039084eac
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  PPBadgeViewSwift: 113fffa82fcda725170e526baab6253dc105f44d
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+
+PODFILE CHECKSUM: 00bb4e78d4f83b9514746683e7a60cf9eb2715e0
+
+COCOAPODS: 1.8.4

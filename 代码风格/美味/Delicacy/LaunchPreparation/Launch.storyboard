@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lanuch Page-->
+        <scene sceneID="U0P-Id-qdP">
+            <objects>
+                <viewController storyboardIdentifier="RYLanuchPage" id="oei-rW-yld" customClass="RYLanuchPage" customModule="Delicacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iEc-Ro-85d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jjS-u1-ErA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="network_error" translatesAutoresizingMaskIntoConstraints="NO" id="hA5-sk-X2b">
+                                <rect key="frame" x="117.5" y="253.5" width="140" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络错误" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2l-cp-Lm1">
+                                <rect key="frame" x="155.5" y="363.5" width="64" height="22.5"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jjS-u1-ErA" firstAttribute="top" secondItem="iEc-Ro-85d" secondAttribute="top" id="3Hk-tv-PE4"/>
+                            <constraint firstItem="W9U-U9-rvr" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="i2l-cp-Lm1" secondAttribute="bottom" constant="16" id="FRT-qV-r9N"/>
+                            <constraint firstItem="i2l-cp-Lm1" firstAttribute="top" secondItem="hA5-sk-X2b" secondAttribute="bottom" constant="10" id="H33-ct-Ton"/>
+                            <constraint firstItem="W9U-U9-rvr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i2l-cp-Lm1" secondAttribute="trailing" constant="16" id="IQa-H0-v70"/>
+                            <constraint firstAttribute="trailing" secondItem="jjS-u1-ErA" secondAttribute="trailing" id="Q9X-WB-dkk"/>
+                            <constraint firstItem="i2l-cp-Lm1" firstAttribute="centerX" secondItem="hA5-sk-X2b" secondAttribute="centerX" id="QXk-rD-6rh"/>
+                            <constraint firstItem="jjS-u1-ErA" firstAttribute="leading" secondItem="iEc-Ro-85d" secondAttribute="leading" id="Yfb-Jh-1xc"/>
+                            <constraint firstItem="hA5-sk-X2b" firstAttribute="centerX" secondItem="W9U-U9-rvr" secondAttribute="centerX" id="ajw-kO-XyZ"/>
+                            <constraint firstAttribute="bottom" secondItem="jjS-u1-ErA" secondAttribute="bottom" id="dbp-lg-KKZ"/>
+                            <constraint firstItem="hA5-sk-X2b" firstAttribute="centerY" secondItem="W9U-U9-rvr" secondAttribute="centerY" constant="-40" id="vn8-Bs-HS0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W9U-U9-rvr"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="jjS-u1-ErA" id="igw-fN-cOW"/>
+                        <outlet property="networkErrorImageView" destination="hA5-sk-X2b" id="euW-ok-dQw"/>
+                        <outlet property="networkErrorLabel" destination="i2l-cp-Lm1" id="ciE-X6-Lbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPw-xT-ftm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="157.87106446776613"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="network_error" width="140" height="100"/>
+    </resources>
+</document>
