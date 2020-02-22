@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ads Page-->
+        <scene sceneID="7kh-ty-7fl">
+            <objects>
+                <viewController storyboardIdentifier="RYAdsPage" id="Eu6-qK-txl" customClass="RYAdsPage" customModule="Spirits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqh-Fj-TSB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xhq-1u-rMi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-QH-G0k">
+                                <rect key="frame" x="370" y="45" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="ykw-KN-a8b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1P-DH-f2w">
+                                <rect key="frame" x="344" y="32" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="3Aj-TI-MlY"/>
+                                    <constraint firstAttribute="height" constant="42" id="sYx-EI-Go6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="跳过"/>
+                                <connections>
+                                    <action selector="countDownButtonTapped:" destination="Eu6-qK-txl" eventType="touchUpInside" id="rOR-UV-v7o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xhq-1u-rMi" firstAttribute="leading" secondItem="JPH-54-utJ" secondAttribute="leading" id="68A-3f-aVl"/>
+                            <constraint firstItem="xBq-QH-G0k" firstAttribute="trailing" secondItem="B1P-DH-f2w" secondAttribute="trailing" id="BQK-5O-KU7"/>
+                            <constraint firstItem="Xhq-1u-rMi" firstAttribute="trailing" secondItem="JPH-54-utJ" secondAttribute="trailing" id="Exe-cm-gen"/>
+                            <constraint firstAttribute="bottom" secondItem="Xhq-1u-rMi" secondAttribute="bottom" id="M13-Av-G16"/>
+                            <constraint firstItem="xBq-QH-G0k" firstAttribute="centerY" secondItem="B1P-DH-f2w" secondAttribute="centerY" id="WQy-zl-0cl"/>
+                            <constraint firstItem="B1P-DH-f2w" firstAttribute="trailing" secondItem="Xhq-1u-rMi" secondAttribute="trailing" constant="-28" id="dkw-Ei-flI"/>
+                            <constraint firstItem="Xhq-1u-rMi" firstAttribute="top" secondItem="aqh-Fj-TSB" secondAttribute="top" id="u5g-i3-fXF"/>
+                            <constraint firstItem="B1P-DH-f2w" firstAttribute="top" secondItem="Xhq-1u-rMi" secondAttribute="top" constant="32" id="yvO-f9-5PH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JPH-54-utJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="Xhq-1u-rMi" id="1yf-nt-RMP"/>
+                        <outlet property="countDownButton" destination="B1P-DH-f2w" id="QCq-Df-4XJ"/>
+                        <outlet property="countDownLabel" destination="xBq-QH-G0k" id="ayu-IE-cD9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9Z-EH-Vzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="149"/>
+        </scene>
+    </scenes>
+</document>

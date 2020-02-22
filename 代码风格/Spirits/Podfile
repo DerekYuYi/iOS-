@@ -1,0 +1,23 @@
+platform :ios, '10.0'
+inhibit_all_warnings!
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+
+target 'Spirits' do
+    
+    pod 'Alamofire', '~> 4.7.2' # Elegant HTTP Networking in Swift
+    pod 'Kingfisher', '~> 5.10.0' # A lightweight and pure Swift implemented library for downloading and cacheing image from the web
+    pod 'Toast-Swift', '~> 4.0.0' # A Swift extension that adds toast notifications to the UIView object class
+    pod 'JPush'
+    pod 'WechatOpenSDK'
+#    pod 'Weibo_SDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
+    pod 'CryptoSwift'
+    
+    pod 'MDAd', '~> 0.8.7'
+    # pod 'Bytedance-UnionAD'
+    
+end
+
+

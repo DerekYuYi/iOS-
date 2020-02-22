@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RYNewsVideoCell" rowHeight="374" id="WXd-3h-NT6" customClass="RYNewsVideoCell" customModule="Spirits" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WXd-3h-NT6" id="5gc-La-iiS">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="373.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="班干部一定要把这项职责发挥好，切实为老百姓做力所能及、踏踏实实的事情" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsJ-2h-uVE">
+                        <rect key="frame" x="16" y="12" width="336" height="45"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秋风画历史" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwU-kN-cfC">
+                        <rect key="frame" x="16" y="266" width="60" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2280评论" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QO-BD-9kO">
+                        <rect key="frame" x="84" y="266" width="53" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25分钟前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL7-pz-i6Z">
+                        <rect key="frame" x="145" y="266" width="51" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bvh-hP-heF">
+                        <rect key="frame" x="16" y="65" width="343" height="193"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Bvh-hP-heF" secondAttribute="height" multiplier="16:9" id="MJO-Nv-v40"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_large" translatesAutoresizingMaskIntoConstraints="NO" id="Z68-Pk-Fhl">
+                        <rect key="frame" x="166" y="140" width="43" height="43"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2250次" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsA-6o-ykW">
+                        <rect key="frame" x="270" y="236" width="41" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlc-S0-7dc">
+                        <rect key="frame" x="316" y="239" width="1" height="11"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="jSG-aJ-nCK"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jml-Kb-eb7">
+                        <rect key="frame" x="322" y="236" width="32" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Light" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rlc-S0-7dc" firstAttribute="leading" secondItem="xsA-6o-ykW" secondAttribute="trailing" constant="5" id="1z5-xr-S6P"/>
+                    <constraint firstItem="Bvh-hP-heF" firstAttribute="top" secondItem="KsJ-2h-uVE" secondAttribute="bottom" constant="8" id="3ce-l1-4mt"/>
+                    <constraint firstItem="iwU-kN-cfC" firstAttribute="leading" secondItem="Bvh-hP-heF" secondAttribute="leading" id="DdY-El-Ihj"/>
+                    <constraint firstItem="Jml-Kb-eb7" firstAttribute="leading" secondItem="Rlc-S0-7dc" secondAttribute="trailing" constant="5" id="EFL-E1-50s"/>
+                    <constraint firstItem="Rlc-S0-7dc" firstAttribute="height" secondItem="Jml-Kb-eb7" secondAttribute="height" constant="-6" id="HEy-Md-Otf"/>
+                    <constraint firstItem="cL7-pz-i6Z" firstAttribute="top" secondItem="7QO-BD-9kO" secondAttribute="top" id="IaK-FG-aJh"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KsJ-2h-uVE" secondAttribute="trailing" constant="16" id="Ioy-59-gpT"/>
+                    <constraint firstItem="7QO-BD-9kO" firstAttribute="top" secondItem="iwU-kN-cfC" secondAttribute="top" id="M4P-Ni-tPU"/>
+                    <constraint firstItem="KsJ-2h-uVE" firstAttribute="top" secondItem="5gc-La-iiS" secondAttribute="top" constant="12" id="Om8-kH-GDn"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cL7-pz-i6Z" secondAttribute="bottom" constant="12" id="Oyt-Et-rK4"/>
+                    <constraint firstAttribute="trailing" secondItem="Bvh-hP-heF" secondAttribute="trailing" constant="16" id="Udv-gH-ZMY"/>
+                    <constraint firstItem="Jml-Kb-eb7" firstAttribute="trailing" secondItem="Bvh-hP-heF" secondAttribute="trailing" constant="-5" id="W25-wm-2ze"/>
+                    <constraint firstItem="KsJ-2h-uVE" firstAttribute="leading" secondItem="5gc-La-iiS" secondAttribute="leading" constant="16" id="WDa-nh-dk9"/>
+                    <constraint firstItem="Jml-Kb-eb7" firstAttribute="bottom" secondItem="Bvh-hP-heF" secondAttribute="bottom" constant="-5" id="ZcV-gj-exP"/>
+                    <constraint firstItem="cL7-pz-i6Z" firstAttribute="leading" secondItem="7QO-BD-9kO" secondAttribute="trailing" constant="8" id="cMs-89-qHR"/>
+                    <constraint firstItem="Z68-Pk-Fhl" firstAttribute="centerX" secondItem="Bvh-hP-heF" secondAttribute="centerX" id="dUd-66-YBs"/>
+                    <constraint firstItem="iwU-kN-cfC" firstAttribute="top" secondItem="Bvh-hP-heF" secondAttribute="bottom" constant="8" id="g7s-RU-7gu"/>
+                    <constraint firstItem="7QO-BD-9kO" firstAttribute="leading" secondItem="iwU-kN-cfC" secondAttribute="trailing" constant="8" id="iy6-i2-zeg"/>
+                    <constraint firstItem="xsA-6o-ykW" firstAttribute="centerY" secondItem="Rlc-S0-7dc" secondAttribute="centerY" id="kGn-iH-Tke"/>
+                    <constraint firstItem="Rlc-S0-7dc" firstAttribute="centerY" secondItem="Jml-Kb-eb7" secondAttribute="centerY" id="qoT-xi-MeY"/>
+                    <constraint firstItem="Z68-Pk-Fhl" firstAttribute="centerY" secondItem="Bvh-hP-heF" secondAttribute="centerY" id="sUm-hD-Kxe"/>
+                    <constraint firstItem="Bvh-hP-heF" firstAttribute="leading" secondItem="5gc-La-iiS" secondAttribute="leading" constant="16" id="wbI-Z5-Tci"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commentsLabel" destination="7QO-BD-9kO" id="57T-nV-70n"/>
+                <outlet property="contentLabel" destination="KsJ-2h-uVE" id="ZoX-50-1TL"/>
+                <outlet property="coverImageView" destination="Bvh-hP-heF" id="xov-5C-Esg"/>
+                <outlet property="durationLabel" destination="Jml-Kb-eb7" id="5Xh-LE-qeb"/>
+                <outlet property="playCountLabel" destination="xsA-6o-ykW" id="4Qo-fS-mfk"/>
+                <outlet property="sourceLabel" destination="iwU-kN-cfC" id="uht-Xy-Tyv"/>
+                <outlet property="updatedTimeLabel" destination="cL7-pz-i6Z" id="y7V-9E-FeO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play_large" width="43" height="43"/>
+    </resources>
+</document>

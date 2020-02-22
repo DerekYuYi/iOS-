@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.7.3)
+  - CryptoSwift (1.0.0)
+  - JCore (1.2.2)
+  - JPush (3.1.0):
+    - JCore (~> 1.2.0)
+  - Kingfisher (5.10.1):
+    - Kingfisher/Core (= 5.10.1)
+  - Kingfisher/Core (5.10.1)
+  - MDAd (0.8.7)
+  - Toast-Swift (4.0.0)
+  - WechatOpenSDK (1.8.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7.2)
+  - CryptoSwift
+  - JPush
+  - Kingfisher (~> 5.10.0)
+  - MDAd (~> 0.8.7)
+  - Toast-Swift (~> 4.0.0)
+  - WechatOpenSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CryptoSwift
+    - JCore
+    - JPush
+    - Kingfisher
+    - MDAd
+    - Toast-Swift
+    - WechatOpenSDK
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  JCore: f14c0549968a63c22e246a4875aa9d428446f373
+  JPush: 5921e25ad13e0386351079217b009f2039084eac
+  Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
+  MDAd: fdf959dbbafee2f78c807351bab03c8797cf11f4
+  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+
+PODFILE CHECKSUM: 6791954b34a9541a5d1f2d96df38e92e379409f6
+
+COCOAPODS: 1.8.4
