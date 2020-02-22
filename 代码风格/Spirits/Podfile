@@ -16,7 +16,7 @@ target 'Spirits' do
     pod 'CryptoSwift'
     
     pod 'MDAd', '~> 0.8.7'
-    # pod 'Bytedance-UnionAD'
+    pod 'Bytedance-UnionAD'
     
 end
 

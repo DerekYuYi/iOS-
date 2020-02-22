@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
+  - Bytedance-UnionAD (2.7.5.2)
   - CryptoSwift (1.0.0)
   - JCore (1.2.2)
   - JPush (3.1.0):
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
+  - Bytedance-UnionAD
   - CryptoSwift
   - JPush
   - Kingfisher (~> 5.10.0)
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Bytedance-UnionAD
     - CryptoSwift
     - JCore
     - JPush
@@ -33,6 +36,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Bytedance-UnionAD: e044ef9fd7dfa8b974ac6b0bd026788164a8be57
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   JCore: f14c0549968a63c22e246a4875aa9d428446f373
   JPush: 5921e25ad13e0386351079217b009f2039084eac
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
 
-PODFILE CHECKSUM: 6791954b34a9541a5d1f2d96df38e92e379409f6
+PODFILE CHECKSUM: e6bdcc27454c8737fe718a0d95a935a9a0fc6a28
 
 COCOAPODS: 1.8.4

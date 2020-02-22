@@ -33,10 +33,7 @@ class RYAdItemCollectionCell: UICollectionViewCell {
         
         if let url = URL(string: adsUrl) {
             adsImageView.kf.setImage(with: url,
-                                     placeholder: nil,
-                                     options: [.transition(.fade(0.7)), .fromMemoryCacheOrRefresh],
-                                     progressBlock: nil,
-                                     completionHandler: nil)
+                                     options: [.transition(.fade(0.7)), .fromMemoryCacheOrRefresh])
         }
         
         if !hidden {
