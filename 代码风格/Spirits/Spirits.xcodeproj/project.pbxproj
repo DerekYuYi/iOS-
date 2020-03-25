@@ -1112,7 +1112,7 @@
 				CODE_SIGN_ENTITLEMENTS = Spirits/Spirits.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.4.1;
-				DEVELOPMENT_TEAM = 7PSA7A9D36;
+				DEVELOPMENT_TEAM = GSYASEYE5G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Spirits",
@@ -1196,7 +1196,7 @@
 				CODE_SIGN_ENTITLEMENTS = Spirits/Spirits.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.4.1;
-				DEVELOPMENT_TEAM = 7PSA7A9D36;
+				DEVELOPMENT_TEAM = GSYASEYE5G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Spirits",

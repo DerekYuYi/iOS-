@@ -72,7 +72,7 @@ class RYEntryPage: UIViewController {
     
     // News related
     
-    private let dataManager =  RYNewsRequester()
+    private let dataManager = RYNewsRequester()
     private var action = "refresh"
     private var theme: String = "推荐"
     
@@ -283,7 +283,7 @@ extension RYEntryPage: UITableViewDelegate, UITableViewDataSource {
             return tableView.dequeueReusableCell(withIdentifier: String(describing: Constants.identifierForNewsTitleCell), for: indexPath)
             
         case .news:
-            
+        
             if indexPath.row < dataManager.newsList.count {
                 let newsItem = dataManager.newsList[indexPath.row]
                 if let dtype = newsItem.dtype {
